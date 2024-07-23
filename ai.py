@@ -14,12 +14,12 @@ while True :
     """)
     choice = int(input("Enter your Choices : "))
     if(choice == 1) :
-        #while True:
-        userText = input("Enter your Query : ")
-        if(userText == "Bye") :
-            break
-        response = aiCalling(userText)
-        print(f"AI : {response}")
+        while True:
+            userText = input("Enter your Query : ")
+            if(userText == "Bye") :
+                break
+            response = aiCalling(userText)
+            print(f"AI : {response}")
     elif (choice == 2) :
         print("Program Successfully Executed")
         break
