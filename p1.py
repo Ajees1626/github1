@@ -1,5 +1,22 @@
 import random
+import mysql.connector
  
+con = mysql.connector.connect(
+    host ="localhost",
+    user ="root",
+    password ="ajees2609",
+    database = "codeajees"
+)
+cursor = con.cursor()
+query = "select * from user"
+try:
+    cursor.execute(query)
+except mysql.connector.errors as e:
+    print(f"Error: {e}")
+cursor.execute(query)
+players = cursor.fetchall()
+
+print(players)
 
 while True :
     print ("""
@@ -54,3 +71,4 @@ while True :
          print("statement")
     else:
          print("invalid number ")
+
